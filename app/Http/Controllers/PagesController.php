@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Intervention\Image;
+
 use App\Http\Requests;
 use App\Photo;
 use DB;
@@ -36,4 +38,6 @@ class PagesController extends Controller
 		Photo::create(["name" => $name, "path" => $path]);
 		
 	}
+
+    
 }
