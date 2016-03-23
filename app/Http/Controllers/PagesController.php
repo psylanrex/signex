@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use Intervention\Image;
+use Image;
 
 use App\Http\Requests;
 use App\Photo;
@@ -32,10 +32,14 @@ class PagesController extends Controller
     public function addPhoto(Request $request) {
 		$file = $request->file('file');
 		$name = time() . $file->getClientOriginalName();
-		$file->move('photos/gallery', $name);
-		$path = "/photos/gallery/{$name}";
+		$file->move('photos/gallery/big', $name);
+		$path = "photos/gallery/big/{$name}";
+        $thumbnail_name = 'tn-' . $name;
+        $thumbnail_path = "photos/gallery/thumbnails/{$thumbnail_name}";
+
+        Image::make($path)->fit(200)->save($thumbnail_path);
 		
-		Photo::create(["name" => $name, "path" => $path]);
+		Photo::create(["name" => $name, "path" => $path, "thumbnail_path" => $thumbnail_path]);
 		
 	}
 
