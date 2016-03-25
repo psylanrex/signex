@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Image;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 use App\Http\Requests;
 use App\Photo;
@@ -31,17 +32,25 @@ class PagesController extends Controller
 
     public function addPhoto(Request $request) {
 		$file = $request->file('file');
-		$name = time() . $file->getClientOriginalName();
-		$file->move('photos/gallery/big', $name);
-		$path = "photos/gallery/big/{$name}";
-        $thumbnail_name = 'tn-' . $name;
-        $thumbnail_path = "photos/gallery/thumbnails/{$thumbnail_name}";
+		
+        $photo = $this->makePhoto($file);
 
-        Image::make($path)->fit(200)->save($thumbnail_path);
-		
-		Photo::create(["name" => $name, "path" => $path, "thumbnail_path" => $thumbnail_path]);
-		
+        $photo->save();
 	}
 
+    protected function makePhoto(UploadedFile $file) {
+        return Photo::named($file->getClientOriginalName())->move($file);
+    }
+
+    protected function move(Photo $photo) {
+        $photo->move($photo->path);
+        return $photo;
+    }
+
+    protected function makeThumbnail(Photo $photo) {
+        Image::make($photo->path)
+             ->fit(200)
+             ->save($photo->thumbnail_path);
+    }
     
 }
