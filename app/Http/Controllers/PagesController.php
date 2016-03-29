@@ -21,6 +21,7 @@ class PagesController extends Controller
     	return view("pages.create");
     }
 
+
     public function store() {
 
     }

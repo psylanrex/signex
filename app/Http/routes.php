@@ -15,11 +15,16 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
-// Route::get('admin', 'PagesController@index');
+Route::get('gallery', function() {
+	return view('pages.gallery-default');
+});
+
+Route::get('admin', 'PagesController@index');
 Route::resource('admin', 'PagesController');
 
 Route::post('/admin/gallery', 'PagesController@addPhoto');
 Route::get('/admin/gallery', 'PagesController@show');
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes

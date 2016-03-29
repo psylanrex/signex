@@ -2,16 +2,16 @@
 
 @section('content')
 	<h2>Gallery</h2>
-	<div class="container">
+	<div class="container" id="gallery">
 		<div class="row">
 			@foreach(array_chunk($photos, 4) as $set)
 				<div class="row">
 					@foreach($set as $photo)
 						<div class="col-sm-3 col-md-3 gallery__image">
-							<a href="#" class="thumbnail">
-								<img src="/{{$photo->thumbnail_path}}" alt="">
-							</a>
-						</div>	
+							<div class="img-container">
+								<img class="thumbnail" src="/{{$photo->thumbnail_path}}" alt="">
+							</div>	
+						</div>
 					@endforeach
 				</div>
 			@endforeach
