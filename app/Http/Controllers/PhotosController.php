@@ -30,13 +30,14 @@ class PhotosController extends Controller
         $photo->save();
     }
 
-    public function show(Photo $photo) {
-    	return view('photos.show', compact('photo'));
+    public function show($id) {
+        $photo = Photo::findOrFail($id);
+        return view('photos.show', compact('photo'));
     }
 
     public function destroy($id) {
         Photo::findOrFail($id)->delete();
-        return redirect('photos.show');
+        return back();
     }
 
     protected function makePhoto(UploadedFile $file) {

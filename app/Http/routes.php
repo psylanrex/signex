@@ -20,7 +20,8 @@ Route::get('/admin/gallery', 'PagesController@show_gallery');
 
 Route::resource('admin', 'PagesController');
 
-
+Route::get('/admin/1/photos/{id}', 'PhotosController@show');
+Route::delete('/admin/1/photos/{id}', 'PhotosController@destroy');
 Route::resource('admin.photos', 'PhotosController');
 
 

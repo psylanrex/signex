@@ -2,6 +2,6 @@
 
 @section('content')
 	<div>
-		Photo id: {{$photo->id}}
+		{{$photo->path}}
 	</div>
 @stop

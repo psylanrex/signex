@@ -9,8 +9,13 @@
 					@foreach($set as $photo)
 						<div class="col-sm-3 col-md-3 gallery__image">
 							<div class="img-container">
-								<img class="thumbnail" src="/{{$photo->thumbnail_path}}" alt="">
-								<form>
+								<a href="{{url('/admin/1/photos', $photo->id)}}">
+									<img class="thumbnail" src="/{{$photo->thumbnail_path}}" alt="">
+								</a>
+								<form method="POST" action="{{ url('admin/1/photos', $photo->id) }}">
+
+									{!! csrf_field() !!}
+									{!! method_field('DELETE') !!}
 
 									<button type="submit" class="btn btn-danger">
 										Delete <i class="fa fa-trash"></i>
