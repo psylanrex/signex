@@ -34,11 +34,11 @@ class Photo extends Model
     	return $this;
     }
 
-    // public function delete() {
-    //     \File::delete([
-    //         $this->path,
-    //         $this->thumbnail_path
-    //     ]);
-    //     parent::delete();
-    // }
+    public function delete() {
+        \File::delete([
+            $this->path,
+            $this->thumbnail_path
+        ]);
+        parent::delete();
+    }
 }
