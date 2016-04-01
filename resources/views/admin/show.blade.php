@@ -10,7 +10,11 @@
 						<div class="col-sm-3 col-md-3 gallery__image">
 							<div class="img-container">
 								<img class="thumbnail" src="/{{$photo->thumbnail_path}}" alt="">
+								<button type="submit" class="btn btn-danger">
+									<i class="fa fa-trash"></i>
+								</button>
 							</div>	
+							
 						</div>
 					@endforeach
 				</div>

@@ -15,33 +15,32 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
-Route::get('gallery', function() {
-	return view('pages.gallery-default');
-});
+Route::get('/admin/gallery', 'PagesController@show_gallery');
 
-Route::get('admin', 'PagesController@index');
+
 Route::resource('admin', 'PagesController');
 
-Route::post('/admin/gallery', 'PagesController@addPhoto');
-Route::get('/admin/gallery', 'PagesController@show');
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| This route group applies the "web" middleware group to every route
-| it contains. The "web" middleware group is defined in your HTTP
-| kernel and includes session state, CSRF protection, and more.
-|
-*/
+Route::resource('admin.photos', 'PhotosController');
 
-Route::group(['middleware' => ['web']], function () {
-    //
-});
 
-Route::group(['middleware' => 'web'], function () {
-    Route::auth();
 
-    Route::get('/admin', 'PagesController@index');
-});
+// |--------------------------------------------------------------------------
+// | Application Routes
+// |--------------------------------------------------------------------------
+// |
+// | This route group applies the "web" middleware group to every route
+// | it contains. The "web" middleware group is defined in your HTTP
+// | kernel and includes session state, CSRF protection, and more.
+// |
+
+
+// Route::group(['middleware' => ['web']], function () {
+//     //
+// });
+
+// Route::group(['middleware' => 'web'], function () {
+//     Route::auth();
+
+//     Route::get('/admin', 'PagesController@index');
+// });

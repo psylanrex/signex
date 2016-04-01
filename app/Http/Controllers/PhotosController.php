@@ -4,23 +4,53 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Image;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+
 use App\Http\Requests;
 use App\Photo;
+use DB;
 
 class PhotosController extends Controller
 {
 	public function index() {
-		$photos = Photo::all();
-		return view('pages.gallery', compact('photos'));
-	}
+    	return view("photos.create");
+    }
 
-	public function addPhoto(Request $request) {
-		$file = $request->file('file');
-		$name = time() . $file->getClientOriginalName();
-		$file->move('photos/gallery', $name);
-		$path = "/photos/gallery/{$name}";
+    public function create() {
+    	return view("photos.create");
+    }
+
+
+    public function store(Request $request) {
+    	$file = $request->file('file');
 		
-		Photo::create(["name" => $name, "path" => $path]);
-		return redirect('/admin/gallery');
-	}    
+        $photo = $this->makePhoto($file);
+
+        $photo->save();
+    }
+
+    public function show(Photo $photo) {
+    	return view('photos.show', compact('photo'));
+    }
+
+    public function destroy($id) {
+        Photo::findOrFail($id)->delete();
+        return redirect('photos.show');
+    }
+
+    protected function makePhoto(UploadedFile $file) {
+        return Photo::named($file->getClientOriginalName())->move($file);
+    }
+
+    protected function move(Photo $photo) {
+        $photo->move($photo->path);
+        return $photo;
+    }
+
+    protected function makeThumbnail(Photo $photo) {
+        Image::make($photo->path)
+             ->fit(200)
+             ->save($photo->thumbnail_path);
+    }
 }

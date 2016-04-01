@@ -7,7 +7,7 @@
 	<form id="addPhotoForm" 
 			class="dropzone" 
 			method="POST" 
-			action="/admin/gallery">
+			action="/admin/photos">
 		{{ csrf_field() }}
 	</form>
 </div>

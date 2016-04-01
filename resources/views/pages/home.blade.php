@@ -4,7 +4,7 @@
 
 	<div class="jumbotron">
 	  <h1>Signex Admin Home</h1>
-	  <p><a class="btn btn-default btn-lg" href="login" role="button">Sign in</a></p>
+	  <p><a class="btn btn-default btn-lg" href="admin" role="button">Sign in</a></p>
 	</div>
 
 @stop

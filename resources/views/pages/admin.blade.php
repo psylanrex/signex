@@ -13,9 +13,9 @@
 	      <hr>
 	      
 	      <ul class="nav nav-stacked">
-	        <li><a href="#" target="ext"><i class="fa fa-2x fa-home"></i> Home</a></li>
-	        <li><a href="admin/create"><i class="fa fa-upload"></i> Upload Photos</a></li>
-	        <li><a href="#"><i class="fa fa-pencil-square-o"></i> Edit/Delete Photos</a></li>
+	        <li><a href="admin" target="ext"><i class="fa fa-2x fa-home"></i> Home</a></li>
+	        <li><a href="admin/1/photos/create"><i class="fa fa-upload"></i> Upload Photos</a></li>
+	        <li><a href="admin/1/gallery"><i class="fa fa-pencil-square-o"></i> Edit/Delete Photos</a></li>
 	        <li><a href="#"><i class="fa fa-file-text"></i> Read Messages</a></li>
 	       </ul>
 	      	      
