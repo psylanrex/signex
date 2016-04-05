@@ -12,16 +12,19 @@
 								<a href="{{url('/admin/1/photos', $photo->id)}}">
 									<img class="thumbnail" src="/{{$photo->thumbnail_path}}" alt="">
 								</a>
-								<form method="POST" action="{{ url('admin/1/photos', $photo->id) }}">
+								<div class="row">
+									<div class="col-sm-6 col-sm-offset-3">
+										<form method="POST" action="{{ url('admin/1/photos', $photo->id) }}">
 
-									{!! csrf_field() !!}
-									{!! method_field('DELETE') !!}
+											{!! csrf_field() !!}
+											{!! method_field('DELETE') !!}
 
-									<button type="submit" class="btn btn-danger">
-										Delete <i class="fa fa-trash"></i>
-									</button>
-								</form>
-								
+											<button type="submit" class="btn btn-danger">
+												Delete <i class="fa fa-trash"></i>
+											</button>
+										</form>
+									</div>
+								</div>
 							</div>	
 							
 						</div>

@@ -1,5 +1,30 @@
 @extends('layout')
 
+@section('subnav')
+
+	<div class="subnavbar">
+		<div class="subnavbar-inner">
+			<div class="container">
+				<ul class="mainnav">
+					<li class="active">
+						<a href="/admin"><i class="fa fa-2x fa-home"></i> Main</a>
+					</li>
+					<li>
+						<a href="/admin/1/photos/create"><i class="fa fa-upload"></i> Upload Photos</a>
+					</li>
+					<li>
+						<a href="/admin/gallery"><i class="fa fa-trash"></i> Delete Photos</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-file-text"></i> Read Messages</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+@stop
+
 @section('content')
 
 <!-- Main -->
@@ -7,20 +32,8 @@
 	  
 	  <!-- upper section -->
 	  <div class="row">
-		<div class="col-sm-3">
-	      <!-- left -->
-	      <h3><i class="glyphicon glyphicon-briefcase"></i> Toolbox</h3>
-	      <hr>
-	      
-	      <ul class="nav nav-stacked">
-	        <li><a href="admin" target="ext"><i class="fa fa-2x fa-home"></i> Home</a></li>
-	        <li><a href="admin/1/photos/create"><i class="fa fa-upload"></i> Upload Photos</a></li>
-	        <li><a href="admin/1/gallery"><i class="fa fa-pencil-square-o"></i> Edit/Delete Photos</a></li>
-	        <li><a href="#"><i class="fa fa-file-text"></i> Read Messages</a></li>
-	       </ul>
-	      	      
-	  	</div><!-- /span-3 -->
-	    <div class="col-sm-9">
+
+	    <div class="col-sm-12">
 	      	
 	      <!-- column 2 -->	
 	       <h3><i class="glyphicon glyphicon-dashboard"></i> Signex Dashboard</h3>  
@@ -29,6 +42,7 @@
 	      
 			<div class="row">
 				<div class="col-sm-12">
+					@yield('main-content')
 					@yield('form')
 				</div>
 			</div>
@@ -43,22 +57,10 @@
 
 	  <div class="row">
 	    
-	   	<h2>Content in a row</h2>             
-	      
-
-	      
-	  
-	      
-	      <hr>
-	      
 	      <div class="alert alert-info">
 	        <button type="button" class="close" data-dismiss="alert">×</button>
 	        Please remember to <a href="#">Logout</a> for classified security.
-	      </div>
-
-	    
-	    </div>
-	    
+	      </div>	    
 	    
 	  </div><!--/row-->
 	  

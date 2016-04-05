@@ -14,7 +14,7 @@ use DB;
 class PhotosController extends Controller
 {
 	public function index() {
-    	return view("photos.create");
+    	return view("admin.main-content");
     }
 
     public function create() {

@@ -15,14 +15,14 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
-Route::get('/admin/gallery', 'PagesController@show_gallery');
+// Route::get('/admin/gallery', 'PagesController@show_gallery');
 
+Route::get('admin/gallery', ['as' => 'gallery', 'uses' => 'PagesController@show_gallery']);
 
-Route::resource('admin', 'PagesController');
-
+Route::get('admin', 'PhotosController@index');
+Route::get('/admin/1/photos/create', 'PhotosController@create');
 Route::get('/admin/1/photos/{id}', 'PhotosController@show');
-Route::delete('/admin/1/photos/{id}', 'PhotosController@destroy');
-Route::resource('admin.photos', 'PhotosController');
+Route::delete('admin/1/photos/{id}', 'PhotosController@destroy');
 
 
 
