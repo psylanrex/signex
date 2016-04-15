@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('pages.home');
+    return view('public-pages.test');
 });
 
 // Route::get('/admin/gallery', 'PagesController@show_gallery');
