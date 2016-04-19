@@ -28,7 +28,6 @@ elixir(function(mix) {
         'respond.min.js',
         'wow.min.js',
         'easing.js',
-        'responsive-nav.js'
         ], 'public/js/libs.js')
         .scripts(['main.js']);
 });

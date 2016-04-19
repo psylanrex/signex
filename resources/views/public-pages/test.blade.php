@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300italic,400italic,500,300,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
 </head>
 
 <body>
@@ -15,7 +16,7 @@
   <section class="header">
     <div class="header-top">
       <div class="container">
-        <nav class="navbar navbar-primary">
+        <nav class="navbar navbar-primary navbar-fixed-top">
           <div class="container-fluid nav-container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -162,6 +163,7 @@
   </section>
   <!-- End .contact -->
   <script type="text/javascript" src="/js/libs.js"></script>
+  <script type="text/javascript" src="/js/all.js"></script>
 </body>
 </html>
 
