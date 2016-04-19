@@ -76,4 +76,82 @@ body {
     bottom: -10px;
     margin: 0 20px; }
 
+.portfolio .portfolio-top {
+  padding: 6% 0; }
+  .portfolio .portfolio-top #portfolio-main-title {
+    text-transform: uppercase;
+    color: #000;
+    font-size: 3em;
+    font-weight: 100;
+    margin: 0 15px; }
+  .portfolio .portfolio-top span.bottom-line {
+    width: 50px;
+    display: block;
+    border-bottom: 2px solid #000;
+    position: absolute;
+    bottome: -10px;
+    margin: 0 20px; }
+
+.portfolio .portfolio-list .thumbnail img {
+  width: 200px;
+  height: 200px; }
+
+.contact {
+  width: 100%;
+  height: 100%;
+  background: url("/photos/main/main2.jpg") no-repeat center center fixed;
+  background-size: cover;
+  padding: 6% 0; }
+  .contact #contact-main-title {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3em;
+    font-weight: 100;
+    margin: 0 15px; }
+  .contact span.bottom-line {
+    width: 50px;
+    display: block;
+    border-bottom: 2px solid #fff;
+    position: absolute;
+    bottome: -10px;
+    margin: 0 20px; }
+  .contact .contact-wrapper {
+    background: rgba(73, 84, 91, 0.84);
+    margin: 1px; }
+    .contact .contact-wrapper .contact-top {
+      margin: 6% 0; }
+  .contact .comment-form .comment-form-top {
+    margin-bottom: 8%; }
+  .contact .comment-form label {
+    display: block;
+    color: #fff;
+    text-transform: uppercase; }
+  .contact .comment-form input {
+    padding: 20px;
+    width: 85%;
+    color: #fff;
+    font-size: 0.85em;
+    border: 2px solid #fff;
+    background: none;
+    outline: none;
+    display: block; }
+  .contact .comment-form button {
+    margin: 7%;
+    padding: 20px 160px;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    background-color: #43b6e5;
+    border-radius: 0;
+    border: none; }
+  .contact .comment-form textarea {
+    display: block;
+    padding: 20px;
+    width: 100%;
+    background: none;
+    border: 2px solid #fff;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    height: 156px; }
+
 /*# sourceMappingURL=main.css.map */

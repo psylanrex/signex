@@ -12,7 +12,7 @@
 
 <body>
   <!-- Start .header -->
-  <div class="header">
+  <section class="header">
     <div class="header-top">
       <div class="container">
         <nav class="navbar navbar-primary">
@@ -48,11 +48,11 @@
       <h1>We are here to help build your business images.</h1>
       <h2>Let us make the face of your business!</h2>
     </div>
-  </div>
+  </section>
   <!-- End .header -->
 
   <!-- Start .services -->
-  <div class="services" id="services">
+  <section class="services" id="services">
     <div class="container">
       <div class="row">
         <h2 id="services-main-title">Services</h2>
@@ -75,19 +75,91 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <!-- End .services -->
 
   <!-- Start .portfolio -->
-  <div class="portfolio" id="portfolio">
-
-  </div>
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="portfolio-top">
+        <h2 id="portfolio-main-title">Portfolio</h2>
+        <div class="line"><span class="bottom-line"> </span></div>
+      </div>
+      <div class="row portfolio-list">
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/photos/main/home1.jpg">
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/photos/main/home2.jpg">
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/photos/main/home3.jpg">
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/photos/main/home4.jpg">
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/photos/main/home5.jpg">
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/photos/main/home6.jpg">
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/photos/main/home7.jpg">
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/photos/main/home8.jpg">
+          </a>
+        </div>
+      </div>
+        
+    </div>
+  </section>
   <!-- End .portfolio -->
 
   <!-- Start .contact -->
-  <div class="contact" id="contact">
-
-  </div>
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="row contact-wrapper">
+        <div class="contact-top">
+          <h2 id="contact-main-title">Contact</h2>
+          <div class="line"><span class="bottom-line"> </span></div>
+        </div>
+        <form class="comment-form">
+          <div class="col-md-6 comment-form-top">
+            <p class="comment-form-author">
+              <label for="comment-author-name">Name </label>
+              <input id="comment-author-name" name="comment-author-name" type="text" value="" size="30" aria-required="true">
+            </p>
+            <p class="comment-form-email">
+              <label for="author">Email </label>
+              <input id="comment-author-email" name="comment-author-email" type="email" value="" size="30" aria-required="true">
+            </p>
+          </div>
+          <div class="col-md-6 comment-message">
+            <label for="comment">Leave a message</label>
+            <textarea for="comment"></textarea>
+            <button class="btn btn-primary" type="submit">Send a message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
   <!-- End .contact -->
   <script type="text/javascript" src="/js/libs.js"></script>
 </body>
